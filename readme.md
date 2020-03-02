@@ -1,3 +1,5 @@
+*repository ini dibentuk untuk penyelesaian tugas Komunikasi Data dan Jaringan Komputer*
+
 # Aplikasi BabyBuddy
 
 ## Anggota Kelompok
@@ -27,6 +29,27 @@ Untuk kredensial login adalah :
 
 
 ## Membuat VM ubuntu server
+
+1. Mengunduh VDI ubuntu 18.04 headless dari http://repo.apps.cs.ipb.ac.id/lab/ubuntu-server.vdi.gz.
+
+2. Membuat instance ubuntu baru kemudian melakukan konfigurasi network.
+
+![instance ubuntu](set1.png)
+
+Buka *network -> advanced* lalu lakukan port forwarding
+
+![port forwarding](set2.png)
+
+3. Karena komputer host saya menggunakan windows maka saya menggunakan sebuah aplikasi bernama putty untuk mengakses vm linux yang saya buat sebelumnya.
+
+<img src="putty_icon.png" height="50" align="left">
+
+Untuk mengunduh puTTy dapat dilakukan di [sini](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+
+4. Saya kemudian mengakses vm dengan mengisi konfigurasi ssh
+
+![ssh](1.png)
+
 
 ## Instalasi
 
@@ -193,6 +216,9 @@ Skrip shell untuk otomatisasi instalasi, konfigurasi, dan maintenance.
 ## Cara Pemakaian
 
 - Tampilan aplikasi web
+
+![Tampilan Aplikasi Web](lamanutama.png)
+
 - Fungsi-fungsi utama
 - Isi dengan data real/dummy (jangan kosongan) dan sertakan beberapa screenshot
 
