@@ -274,7 +274,7 @@ Berikut penjabaran fungsi :
 
 | Fungsi    | Deksripsi         | Gambar          |
 | ------------- |:-------------:| --------------- |
-| Timer | Timer | ![1](images_res/timer1) |
+| Timer | Timer | <img src="images_res/icon.png" height="100" align="center"> |
 
 
 + Hasil dashboard
