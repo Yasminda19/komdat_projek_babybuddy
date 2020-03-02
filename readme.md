@@ -10,7 +10,7 @@
 
 ## Sekilas Tentang
 
-<img src="babybuddy/static_src/logo/icon.png" height="150" align="left">
+<img src="icon.png" height="150" align="left">
 
 Sebuah aplikasi dashboard yang dapat membantu pengurus bayi untuk mencatat waktu tidur, waktu makan, penggantian popok dan dapat memprediksi kebutuhan bayi kedepannya.
 
@@ -31,29 +31,30 @@ Untuk kredensial login adalah :
 ## Instalasi
 
 1. Install system packages, untuk sesi instalasi ini kita alias kan python3 menjadi python (opsional).
+
 ```
-sudo apt-get install python3 python3-pip nginx uwsgi uwsgi-plugin-python3 git libopenjp2-7-dev
-alias python=python3
+    sudo apt-get install python3 python3-pip nginx uwsgi uwsgi-plugin-python3 git libopenjp2-7-dev
+    alias python=python3
 ```
+
 2. Install pipenv
 
-```
-sudo -H pip3 install pipenv
-```
+`   sudo -H pip3 install pipenv`
 
 3. Buat direktori dan clone repository.
+
 ```
-sudo mkdir /var/www/babybuddy
-mkdir -p /var/www/babybuddy/data/media
-git clone https://github.com/babybuddy/babybuddy.git /var/www/babybuddy/public
+      sudo mkdir /var/www/babybuddy
+      mkdir -p /var/www/babybuddy/data/media
+      git clone https://github.com/babybuddy/babybuddy.git /var/www/babybuddy/public
 ```
 
 opsional : ubah owner direktori setelah membuat direktori
-```
-sudo chown user:user /var/www/babybuddy
-```
+
+`      sudo chown user:user /var/www/babybuddy`
 
 4. change direktori ke babybuddy/public kemudian set pipenv secara lokal
+
 ```
         cd /var/www/babybuddy/public
         export PIPENV_VENV_IN_PROJECT=1
@@ -70,12 +71,12 @@ sudo chown user:user /var/www/babybuddy
 
 Catatan :
 
-Baca dokumentasi Django's documentation on the ALLOWED_HOSTS setting](https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts)
+Baca dokumentasi Django's documentation untuk setting production terutama mengenai ALLOWED_HOSTS](https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts)
 
 + ALLOWED_HOSTS
 
 Apabila *ALLOWED_HOSTS[]* :
-ketika DEBUG is True and ALLOWED_HOSTS is empty, maka host akan menjadi `['localhost', '127.0.0.1', '[::1]'].`
+ketika DEBUG is True and ALLOWED_HOSTS is empty, maka host akan menjadi ``['localhost', '127.0.0.1', '[::1]'].``
 
 
 + SECRET_KEY
@@ -85,6 +86,7 @@ isi dengan value apapun, anggap seperti password.
 
 
 6. Inisiasi Aplikasi
+
 ```
         export DJANGO_SETTINGS_MODULE=babybuddy.settings.production
         python manage.py migrate
@@ -92,16 +94,18 @@ isi dengan value apapun, anggap seperti password.
 ```
 
 7. Mengubah permission untuk ownership direktori
+
 ```
         sudo chown -R www-data:www-data /var/www/babybuddy/data
         sudo chmod 640 /var/www/babybuddy/data/db.sqlite3
         sudo chmod 750 /var/www/babybuddy/data
 ```
 8. Membuat dan mengkonfigurasi uWSGI
-```
-        sudo editor /etc/uwsgi/apps-available/babybuddy.ini
-```
+
+`      sudo editor /etc/uwsgi/apps-available/babybuddy.ini`
+
     Contoh Konfigurasi, jangan lupa untuk mengisi direktori:
+
 ```
         [uwsgi]
         plugins = python3
@@ -118,15 +122,16 @@ isi dengan value apapun, anggap seperti password.
 
 
 9. Konfigurasi Symlink dan restart uWSGI
+
 ```
         sudo ln -s /etc/uwsgi/apps-available/babybuddy.ini /etc/uwsgi/apps-enabled/babybuddy.ini
         sudo service uwsgi restart
 ```
 
 10. Membuat dan mengkonfigurasi NGINX
-```
-        sudo editor /etc/nginx/sites-available/babybuddy
-```
+
+`sudo editor /etc/nginx/sites-available/babybuddy`
+
     Contoh konfigurasi:
 
 ```javascript
@@ -150,6 +155,7 @@ isi dengan value apapun, anggap seperti password.
 ```
 
 11. Konfigurasi Symlink dan Restart NGINX
+
 ```
         sudo ln -s /etc/nginx/sites-available/babybuddy /etc/nginx/sites-enabled/babybuddy
         sudo service nginx restart
@@ -201,7 +207,7 @@ Skrip shell untuk otomatisasi instalasi, konfigurasi, dan maintenance.
 
 ## Referensi
 
-[github babybuddy](https://github.com/babybuddy/babybuddy#authentication)
-[uWSGI documentation](http://uwsgi-docs.readthedocs.io/en/latest/)
-[nginx documentation](https://nginx.org/en/docs/)
-[nginx documentation](https://nginx.org/en/docs/)
++ [github babybuddy](https://github.com/babybuddy/babybuddy#authentication)
++ [uWSGI documentation](http://uwsgi-docs.readthedocs.io/en/latest/)
++ [nginx documentation](https://nginx.org/en/docs/)
++ [nginx documentation](https://nginx.org/en/docs/)
