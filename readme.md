@@ -249,10 +249,10 @@ Berikut penjabaran fungsi :
 
 | Fungsi    | Deksripsi         | Gambar          |
 | ------------- |:-------------:| --------------- |
-| Menambahkan Anak | Menambahkan objek anak dan mengisi nama | ![1](images_res/children2) |
-| Menambahkan Note | Kita dapat mengisi note atas apapun yang dilakukan anak kita hari ini atau mengenai anak kita | ![2](images_res/children3) |
-| Menambahkan temperature | Menambahkan suhu tubuh beserta tanggal pengambilan suhu | ![3](images_res/children4) |
-| Menambahkan Berat badan | Menambahkan berat badan beserta tanggal pengambilan  | ![4](images_res/children5) |
+| Menambahkan Anak | Menambahkan objek anak dan mengisi nama | <img src="images_res/children2.png" align="center"> |
+| Menambahkan Note | Kita dapat mengisi note atas apapun yang dilakukan anak kita hari ini atau mengenai anak kita | <img src="images_res/children3.png" align="center"> |
+| Menambahkan temperature | Menambahkan suhu tubuh beserta tanggal pengambilan suhu | <img src="images_res/children4.png" align="center"> |
+| Menambahkan Berat badan | Menambahkan berat badan beserta tanggal pengambilan  | <img src="images_res/children5.png" align="center"> |
 
 + Entry aktivitas
 
@@ -264,10 +264,10 @@ Berikut penjabaran fungsi :
 
 | Fungsi    | Deksripsi         | Gambar          |
 | ------------- |:-------------:| --------------- |
-| Ganti Popok | Menambahkan kapan kita mengganti popok dan waktunya | ![1](images_res/act2) |
-| Memberi Makan | Menambahkan metode pemberian makan,detail dan kapan pemberian makan | ![2](images_res/act4) |
-| Tidur | Menambahkan waktu tidur dan durasi | ![3](images_res/act5) |
-| Tummy Time | Saya ga ngerti ini apa | ![4](images_res/act6) |
+| Ganti Popok | Menambahkan kapan kita mengganti popok dan waktunya | <img src="images_res/act2.png" align="center"> |
+| Memberi Makan | Menambahkan metode pemberian makan,detail dan kapan pemberian makan | <img src="images_res/act3.png" align="center"> |
+| Tidur | Menambahkan waktu tidur dan durasi | <img src="images_res/act4.png" align="center"> |
+| Tummy Time | Saya ga ngerti ini apa | <img src="images_res/act5.png" align="center"> |
 
 
 + Timer
