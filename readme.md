@@ -249,10 +249,10 @@ Berikut penjabaran fungsi :
 
 | Fungsi    | Deksripsi         | Gambar          |
 | ------------- |:-------------:| --------------- |
-| Menambahkan Anak | Menambahkan objek anak dan mengisi nama | ![](images_res/children2) |
-| Menambahkan Note | Kita dapat mengisi note atas apapun yang dilakukan anak kita hari ini atau mengenai anak kita | ![](images_res/children3) |
-| Menambahkan temperature | Menambahkan suhu tubuh beserta tanggal pengambilan suhu | ![](images_res/children4) |
-| Menambahkan Berat badan | Menambahkan berat badan beserta tanggal pengambilan  | ![](images_res/children5) |
+| Menambahkan Anak | Menambahkan objek anak dan mengisi nama | ![1](images_res/children2) |
+| Menambahkan Note | Kita dapat mengisi note atas apapun yang dilakukan anak kita hari ini atau mengenai anak kita | ![2](images_res/children3) |
+| Menambahkan temperature | Menambahkan suhu tubuh beserta tanggal pengambilan suhu | ![3](images_res/children4) |
+| Menambahkan Berat badan | Menambahkan berat badan beserta tanggal pengambilan  | ![4](images_res/children5) |
 
 + Entry aktivitas
 
@@ -264,17 +264,17 @@ Berikut penjabaran fungsi :
 
 | Fungsi    | Deksripsi         | Gambar          |
 | ------------- |:-------------:| --------------- |
-| Ganti Popok | Menambahkan kapan kita mengganti popok dan waktunya | ![](images_res/act2) |
-| Memberi Makan | Menambahkan metode pemberian makan,detail dan kapan pemberian makan | ![](images_res/act4) |
-| Tidur | Menambahkan waktu tidur dan durasi | ![](images_res/act5) |
-| Tummy Time | Saya ga ngerti ini apa | ![](images_res/act6) |
+| Ganti Popok | Menambahkan kapan kita mengganti popok dan waktunya | ![1](images_res/act2) |
+| Memberi Makan | Menambahkan metode pemberian makan,detail dan kapan pemberian makan | ![2](images_res/act4) |
+| Tidur | Menambahkan waktu tidur dan durasi | ![3](images_res/act5) |
+| Tummy Time | Saya ga ngerti ini apa | ![4](images_res/act6) |
 
 
 + Timer
 
 | Fungsi    | Deksripsi         | Gambar          |
 | ------------- |:-------------:| --------------- |
-| Timer | Timer | ![](images_res/timer1) |
+| Timer | Timer | ![1](images_res/timer1) |
 
 
 + Hasil dashboard
