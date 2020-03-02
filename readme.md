@@ -41,7 +41,7 @@ Buka *network -> advanced* lalu lakukan port forwarding
 
 3. Karena komputer host saya menggunakan windows maka saya menggunakan sebuah aplikasi bernama putty untuk mengakses vm linux yang saya buat sebelumnya.
 
-<img src="images_res/putty_icon.png" height="10" align="left">
+<img src="images_res/putty_icon.png" height="30" align="left">
 
 Untuk mengunduh puTTy dapat dilakukan di [sini](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
@@ -288,13 +288,12 @@ setelah sekian entry data yang kita masukkan maka hasilnya akan ditampilkan pada
 
 #### Menurut kami BabyBuddy selama proses deployment mempunyai :
 
-- kelebihan
-
-+ config files lengkap dan terstruktur dengan baik sesuai dengan dokumentasi tech masing-masing yang digunakan. Jadi memudahkan untuk deployment di platform manapun.
-+ `docker-compose` tersedia memudahkan pengguna yang ingin melakukan deployment di docker. Hanya tinggal set value di production setting file lalu initialisasi app.
-+ Dokumentasi spesifikasi nilai parameter yang digunakan untuk API lengkap.
-
-- kekurangan
+| Kelebihan  | Kekurangan    |
+| ------------- |:-------------:|
+| Free Open Source | Fungsi tidak selengkap pada umumnya di implementasi nyata |
+| config files lengkap dan terstruktur dengan baik sesuai dengan dokumentasi tech masing-masing yang digunakan. Jadi memudahkan untuk deployment di platform manapun.|  |
+|`docker-compose` tersedia memudahkan pengguna yang ingin melakukan deployment di docker. Hanya tinggal set value di production setting file lalu initialisasi app. | |
+| Dokumentasi spesifikasi nilai parameter yang digunakan untuk API lengkap. | |
 
 
 #### Perbandingan dengan aplikasi sejenis
