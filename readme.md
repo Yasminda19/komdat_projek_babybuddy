@@ -2,23 +2,23 @@
 
 # Aplikasi BabyBuddy
 
+<img src="images_res/icon.png" height="100" align="center">
+
 ## Anggota Kelompok
 
 | Nama        | NIM         |
 | ------------- |:-------------:|
 | Yasmin Salamah      | G64170108 |
-| Wanda Azizah Yasin      | G64170      |
-| zebra stripes | are neat      |
+| Wanda Azizah Yasin      | G64170027      |
+| Dwi Fristanti Sagala | G64170047      |
 
 ## Sekilas Tentang
 
-<img src="icon.png" height="150" align="left">
-
 Sebuah aplikasi dashboard yang dapat membantu pengurus bayi untuk mencatat waktu tidur, waktu makan, penggantian popok dan dapat memprediksi kebutuhan bayi kedepannya.
 
-![Baby Buddy desktop view](screenshot.png)
+![Baby Buddy desktop view](images_res/screenshot.png)
 
-![Baby Buddy mobile views](screenshot_mobile.png)
+![Baby Buddy mobile views](images_res/screenshot_mobile.png)
 
 Untuk demo aplikasi dapat diakses di [demo of Baby Buddy](http://demo.baby-buddy.net).
 
@@ -27,28 +27,27 @@ Untuk kredensial login adalah :
 - Username: `admin`
 - Password: `admin`
 
-
 ## Membuat VM ubuntu server
 
 1. Mengunduh VDI ubuntu 18.04 headless dari http://repo.apps.cs.ipb.ac.id/lab/ubuntu-server.vdi.gz.
 
 2. Membuat instance ubuntu baru kemudian melakukan konfigurasi network.
 
-![instance ubuntu](set1.png)
+![instance ubuntu](images_res/set1.png)
 
 Buka *network -> advanced* lalu lakukan port forwarding
 
-![port forwarding](set2.png)
+![port forwarding](images_res/set2.png)
 
 3. Karena komputer host saya menggunakan windows maka saya menggunakan sebuah aplikasi bernama putty untuk mengakses vm linux yang saya buat sebelumnya.
 
-<img src="putty_icon.png" height="50" align="left">
+<img src="images_res/putty_icon.png" height="10" align="left">
 
 Untuk mengunduh puTTy dapat dilakukan di [sini](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-4. Saya kemudian mengakses vm dengan mengisi konfigurasi ssh
+4. Saya kemudian mengakses vm dengan mengisi kredensial session
 
-![ssh](1.png)
+![ssh](images_res/1.png)
 
 
 ## Instalasi
@@ -164,7 +163,7 @@ isi dengan value apapun, anggap seperti password.
 
         server {
             listen 80;
-            server_name babybuddy.example.com;
+            server_name localhost;
 
             location / {
                 uwsgi_pass babybuddy;
@@ -199,36 +198,111 @@ Spesifikasi Technology :
 - uwsgi
 - sqlite
 
+## API
 
-##  Maintenance (opsional)
+BabyBuddy menggunakan DJANGO REST FRAMEWORK untuk REST API
+Dokumentasi lebih lanjut dapat diakses di [sini](https://www.django-rest-framework.org/)
 
-Setting tambahan untuk maintenance secara periodik, misalnya:
-- buat backup database tiap pekan
-- hapus direktori sampah tiap hari
-- dll
+#### Authentication
 
+Untuk menggunakan key untuk API Request, dev hanya perlu meng set request `Authorization`
+header menjadi `Token <user-key>`. Seperti contoh :
 
-## Otomatisasi (opsional)
+`Authorization: Token 2h23807gd72h7hop382p98hd823dw3g665g56`
 
-Skrip shell untuk otomatisasi instalasi, konfigurasi, dan maintenance.
+Apabila `Authorization` tidak valid, maka API akan mengembalikkan `403 Forbidden` pada response body.
+
+#### `GET`,`OPTIONS` dan `POST` requests :
+
+- `/api/children/`
+- `/api/changes/` (Diaper Changes)
+- `/api/feedings/`
+- `/api/notes/`
+- `/api/sleep/`
+- `/api/temperature/`
+- `/api/timers/`
+- `/api/tummy-times/`
+- `/api/weight/`
 
 
 ## Cara Pemakaian
 
 - Tampilan aplikasi web
 
-![Tampilan Aplikasi Web](lamanutama.png)
+![Tampilan Aplikasi Web](images_res/lamanutama.png)
 
 - Fungsi-fungsi utama
-- Isi dengan data real/dummy (jangan kosongan) dan sertakan beberapa screenshot
+
+Fungsi utama aplikasi dibagi menjadi 3 :
+
+1. Mengisi entry tentang perkembangan anak
+2. Mengisi entry aktivitas
+3. Timer
+
++ Entry Perkembangan Anak
+
+Berikut fungsi-fungsi yang ada pada entry anak :
+
+![entryperkembangananak(images_res/lamanutama.png)
+
+Berikut penjabaran fungsi :
+
+| Fungsi    | Deksripsi         | Gambar          |
+| ------------- |:-------------:| --------------- |
+| Menambahkan Anak | Menambahkan objek anak dan mengisi nama | ![](images_res/children2) |
+| Menambahkan Note | Kita dapat mengisi note atas apapun yang dilakukan anak kita hari ini atau mengenai anak kita | ![](images_res/children3) |
+| Menambahkan temperature | Menambahkan suhu tubuh beserta tanggal pengambilan suhu | ![](images_res/children4) |
+| Menambahkan Berat badan | Menambahkan berat badan beserta tanggal pengambilan  | ![](images_res/children5) |
+
++ Entry aktivitas
+
+Berikut fungsi-fungsi yang ada pada entry anak :
+
+![entryperkembangananak(images_res/act1.png)
+
+Berikut penjabaran fungsi :
+
+| Fungsi    | Deksripsi         | Gambar          |
+| ------------- |:-------------:| --------------- |
+| Ganti Popok | Menambahkan kapan kita mengganti popok dan waktunya | ![](images_res/act2) |
+| Memberi Makan | Menambahkan metode pemberian makan,detail dan kapan pemberian makan | ![](images_res/act4) |
+| Tidur | Menambahkan waktu tidur dan durasi | ![](images_res/act5) |
+| Tummy Time | Saya ga ngerti ini apa | ![](images_res/act6) |
+
+
++ Timer
+
+| Fungsi    | Deksripsi         | Gambar          |
+| ------------- |:-------------:| --------------- |
+| Timer | Timer | ![](images_res/timer1) |
+
+
++ Hasil dashboard
+
+setelah sekian entry data yang kita masukkan maka hasilnya akan ditampilkan pada dashboard sebagai berikut ini :
+
+![](images_res/dashboard_end.png)
 
 
 ## Pembahasan
 
-- Pendapat anda tentang aplikasi web ini
-    - kelebihan
-    - kekurangan
-- Bandingkan dengan aplikasi web lain yang sejenis
+#### Menurut kami BabyBuddy selama proses deployment mempunyai :
+
+- kelebihan
+
++ config files lengkap dan terstruktur dengan baik sesuai dengan dokumentasi tech masing-masing yang digunakan. Jadi memudahkan untuk deployment di platform manapun.
++ `docker-compose` tersedia memudahkan pengguna yang ingin melakukan deployment di docker. Hanya tinggal set value di production setting file lalu initialisasi app.
++ Dokumentasi spesifikasi nilai parameter yang digunakan untuk API lengkap.
+
+- kekurangan
+
+
+#### Perbandingan dengan aplikasi sejenis
+
+Hampir semua personal dashboard application sejenis hampir mirip secara struktur.
+
+Namun aplikasi serupa yang mirip dengan babybuddy :
++ BI for Baby [bi for baby](https://timoelliott.com/blog/2009/11/bi-for-baby-dashboards-to-track-your-childs-kpis.html)
 
 
 ## Referensi
