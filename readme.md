@@ -126,7 +126,7 @@ isi dengan value apapun, anggap seperti password.
 
 `      sudo editor /etc/uwsgi/apps-available/babybuddy.ini`
 
-    Contoh Konfigurasi, jangan lupa untuk mengisi direktori:
+Contoh Konfigurasi, jangan lupa untuk mengisi direktori:
 
 ```
         [uwsgi]
@@ -154,7 +154,7 @@ isi dengan value apapun, anggap seperti password.
 
 `sudo editor /etc/nginx/sites-available/babybuddy`
 
-    Contoh konfigurasi:
+Contoh konfigurasi:
 
 ```javascript
         upstream babybuddy {
@@ -243,7 +243,7 @@ Fungsi utama aplikasi dibagi menjadi 3 :
 
 Berikut fungsi-fungsi yang ada pada entry anak :
 
-![entryperkembangananak(images_res/lamanutama.png)
+![entryperkembangananak](images_res/lamanutama.png)
 
 Berikut penjabaran fungsi :
 
@@ -258,7 +258,7 @@ Berikut penjabaran fungsi :
 
 Berikut fungsi-fungsi yang ada pada entry anak :
 
-![entryperkembangananak(images_res/act1.png)
+![entryperkembangananak](images_res/act1.png)
 
 Berikut penjabaran fungsi :
 
@@ -281,7 +281,7 @@ Berikut penjabaran fungsi :
 
 setelah sekian entry data yang kita masukkan maka hasilnya akan ditampilkan pada dashboard sebagai berikut ini :
 
-![](images_res/dashboard_end.png)
+![dashboard1](images_res/dashboard_end.png)
 
 
 ## Pembahasan
