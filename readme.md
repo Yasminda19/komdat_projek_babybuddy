@@ -71,7 +71,7 @@ Untuk mengunduh puTTy dapat dilakukan di [sini](https://www.chiark.greenend.org.
       git clone https://github.com/babybuddy/babybuddy.git /var/www/babybuddy/public
 ```
 
-opsional : ubah owner direktori setelah membuat direktori
+ubah owner direktori setelah membuat direktori
 
 `      sudo chown user:user /var/www/babybuddy`
 
