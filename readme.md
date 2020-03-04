@@ -291,9 +291,9 @@ setelah sekian entry data yang kita masukkan maka hasilnya akan ditampilkan pada
 | Kelebihan  | Kekurangan    |
 | ------------- |:-------------:|
 | Free Open Source | Fungsi tidak selengkap pada umumnya di implementasi nyata |
-| config files lengkap dan terstruktur dengan baik sesuai dengan dokumentasi tech masing-masing yang digunakan. Jadi memudahkan untuk deployment di platform manapun.|  |
+| dokumentasi deployment lengkap,memudahkan untuk deployment di platform manapun.|  |
 |`docker-compose` tersedia memudahkan pengguna yang ingin melakukan deployment di docker. Hanya tinggal set value di production setting file lalu initialisasi app. | |
-| Dokumentasi spesifikasi nilai parameter yang digunakan untuk API lengkap. | |
+| REST API lengkap | |
 
 
 #### Perbandingan dengan aplikasi sejenis
